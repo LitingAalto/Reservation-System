@@ -1,10 +1,8 @@
-FROM ubuntu:16.04
-RUN apt-get update -y && \
-    apt-get install python3-pip
-RUN pip3 install --upgrade pip
-RUN pip3 install -r requirements.txt
-
+FROM python:3.6.8
 copy . /
 WORKDIR /
+RUN pip install -r requirements.txt
 
-CMD ["gui.py"]
+
+
+CMD ["python", "gui.py"]
