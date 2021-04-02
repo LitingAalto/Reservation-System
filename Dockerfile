@@ -13,17 +13,17 @@ USER docker
 
 # this is where I was running into problems with the other approaches
 RUN sudo apt-get update 
+RUN sudo apt-get install python3-setuptools
+RUN sudo add-apt-repository universe
+RUN sudo apt-get install python3-pyqt5
 	  
 RUN pip install -r requirements.txt
 
-RUN sudo apt-get install python3-setuptools
-RUN sudo add-apt-repository universe
-RUN sudo apt-get update
-RUN sudo apt-get install python3-pyqt5
 
-RUN add-apt-repository universe
-RUN apt-get update
-RUN apt-get install python3-pyqt5
+
+#RUN add-apt-repository universe
+#RUN apt-get update
+#RUN apt-get install python3-pyqt5
 
 
 CMD ["python", "gui.py"]
