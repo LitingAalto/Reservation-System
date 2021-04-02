@@ -13,7 +13,6 @@ USER docker
 
 # this is where I was running into problems with the other approaches
 RUN sudo apt-get update 
-RUN sudo add-apt-repository universe
 RUN sudo apt-get install python3-pyqt5
 	  
 RUN pip install -r requirements.txt
